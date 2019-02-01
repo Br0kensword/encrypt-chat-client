@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import cat from './cat.png';
+import ChatBar from './components/ChatBar';
 import './App.css';
 
 class App extends Component {
@@ -7,18 +8,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={cat} className="App-logo" alt="cat" />
+          <ChatBar />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Cats must be destroyed.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
       </div>
     );
