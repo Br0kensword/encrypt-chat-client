@@ -19,7 +19,6 @@ class ChatBar extends Component {
   	this.updateMessages(this.state.value);
   	let input = document.getElementById('send');
   	input.value = "";
-  	
   }
 
   handleChange = (event) => {
@@ -30,7 +29,16 @@ class ChatBar extends Component {
   	let newChat = this.state.chat;
   	newChat.push(msg);
   	this.setState({chat: newChat });
+    this.autoScroll();
   }
+
+  autoScroll = () => {
+    let chat = document.getElementById('chatDisplay');
+    let scrollHeight = chat.clientHeight;
+    let contentHeight = chat.scrollHeight;
+    chat.scrollTop = contentHeight - scrollHeight;
+  }
+
 
   render() {
     return (

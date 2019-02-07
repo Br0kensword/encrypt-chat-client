@@ -35,3 +35,19 @@
 .Chat {
     background-color: #282c34;
 }
+
+
+.chatLog {
+    margin-left: 2em;
+    margin-bottom: 0.25em;
+    text-align: left;
+  }
+
+
+
+#chatDisplay {
+  overflow-y: auto;
+  height: 10em;
+}
+
+
